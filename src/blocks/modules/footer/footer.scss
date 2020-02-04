@@ -29,7 +29,8 @@
     &__link {
         text-decoration: none;
         color: $footer-text-color;
-        &_active {
+        transition-duration: 0.3s;
+        &:hover {
             color: $blue-color;
         }
     }
