@@ -1,0 +1,36 @@
+@import "helpers/variables";
+
+
+.footer-block {
+    background-color: $black-color;
+    &_padding {
+        padding: 53px 15px 30px 45px;
+    }
+    &__social {
+        text-align: center;
+    }
+    &__copyright {
+        color: $footer-text-color;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 24px;
+        padding-right: 30px;
+    }
+}
+.social-list {
+    list-style-type: none;
+    &__item {
+        display: inline-block;
+        letter-spacing: 27px;
+        font-size: 20px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $footer-text-color;
+        &_active {
+            color: $blue-color;
+        }
+    }
+}
