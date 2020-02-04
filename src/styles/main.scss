@@ -10,11 +10,54 @@
 
 
 body {
-    // font-family: 'Quicksand', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
 .wrap {
     max-width: 1170px;
-    width: 100%;
+    margin: 0 auto;
+    // padding-left: 100px;
+    // padding-right: 100px;
+}
+
+.text {
+    color: $gray-text-color;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.button-active {
+    box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
+    background-color: $blue-color;
+    border: 1px solid $blue-color;
+    border-radius: 3px;
+    color: $light-color;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    outline: none;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $light-color;
+    }
+}
+.button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+    outline: none;
+    &:hover {
+        border-color: $light-color;
+    }
+}
+.img-phone {
+    background: url(../../../img/phone-img.png) no-repeat;
+    width: 510px;
+    height: 621px;
+
 }
