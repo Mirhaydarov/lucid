@@ -1,0 +1,20 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+
+
+
+body {
+    // font-family: 'Quicksand', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.wrap {
+    max-width: 1170px;
+    width: 100%;
+}
