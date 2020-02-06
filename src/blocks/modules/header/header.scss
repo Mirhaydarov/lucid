@@ -4,11 +4,13 @@
     background-size: cover;
     overflow: hidden;
 }
+
 .header-menu {
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
 }
+
 .logo {
     display: flex;
     font-family: 'Quicksand', sans-serif;
@@ -31,6 +33,7 @@
         }
     }
 }
+
 .nav-block {
     list-style-type: none;
     &__item {
@@ -73,8 +76,11 @@
         &:hover:before {
             opacity: 1;          
         }
+    
+       
     }
 }
+
 .header-block {
     display: flex;
     position: relative;
