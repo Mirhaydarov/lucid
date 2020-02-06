@@ -7,8 +7,6 @@
 @import "../blocks/modules";
 
 
-
-
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -25,7 +23,9 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
+    margin: 0;
 }
+
 .button-active {
     box-shadow: 0 0 3px rgba(3, 3, 3, 0.1);
     background-color: $blue-color;
@@ -37,11 +37,13 @@ body {
     text-transform: uppercase;
     transition-duration: 0.4s;
     outline: none;
+    cursor: pointer;
     &:hover {
         background-color: transparent;
         border: 1px solid $light-color;
     }
 }
+
 .button {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background-color: transparent;
@@ -51,13 +53,145 @@ body {
     text-transform: uppercase;
     transition-duration: 0.4s;
     outline: none;
+    cursor: pointer;
     &:hover {
         border-color: $light-color;
     }
+    &_plan {
+        color: $blue-color;
+        margin-top: 23px;
+        padding: 16px 42px;
+        border: 1px solid #e0e0e0;
+        &:hover {
+            border-color: $blue-color;
+            background-color: $blue-color;
+            color: $light-color;
+        }
+        &_advice {
+            background-color: $blue-color;
+            color: $light-color;
+        }
+    }
 }
+
 .img-phone {
     background: url(../../../img/phone-img.png) no-repeat;
     width: 510px;
     height: 621px;
 
+}
+
+
+// plan block
+.page-plan {
+    margin: 55px 0 60px 0;
+}
+
+.plan {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 102px;
+    
+}
+
+.plan-item {
+    flex-basis: 23.333%;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 29px;
+    min-width: 270px;
+
+    &__title {
+        color: $black-text-color;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 21px 0;
+        &_advice {
+            color: $blue-color;
+        }
+    }
+
+    &__desc {
+        padding: 0px 31px;
+        margin-top: 44px;
+
+    }
+    &__link {
+        color: $blue-color;
+        text-decoration: none;
+    }
+      
+}
+
+.price {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 26px 0 35px 0;
+    &_advice {
+        background-color: $blue-color;;
+    }
+    &__cost {
+        color: $black-text-color;
+        font-size: 60px;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0;
+        &_advice {
+            color: $light-color;
+        }
+    }
+    &__dollar {
+        font-size: 24px;
+        font-weight: 600;
+        vertical-align: super;
+        &_advice {
+            color: $light-color;
+        }
+    }
+    &__period {
+        margin: 0;
+        color: $gray-text-color;
+        font-size: 18px;
+        font-weight: 400;
+        &_advice {
+            color: $light-color;
+        }
+    }
+}
+
+
+
+.page-features {
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 109px;
+}
+
+.features-list {
+    flex-basis: 21%;
+    min-width: 229px;
+    text-align: center;
+    &__img {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        width: 88px;
+        height: 88px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: $black-text-color;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 29px;
+        margin-bottom: 12px;
+    }
 }
