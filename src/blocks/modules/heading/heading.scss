@@ -1,0 +1,46 @@
+.block-heading {
+    text-align: center;
+    &_align_left {
+        text-align: left;
+    }
+    
+    &__title {
+        color: $black-text-color;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 41px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            right: 24px;
+            margin: 0 auto;
+            background-color: $blue-color;
+        }
+        &:before {
+            content: "";
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            top: 75px;
+            left: 20px;
+            right: 0;
+            margin: 0 auto;
+            background-color: $blue-color;
+        }
+        
+    }
+    &__subtitle {
+        display: block;
+        color: $blue-color;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.55px;
+        text-transform: uppercase;
+
+    }
+}
