@@ -63,30 +63,32 @@ body {
         padding: 16px 42px;
         border: 1px solid #e0e0e0;
         &:hover {
-            border-color: $blue-color;
-            background-color: $blue-color;
+            border-color: lighten($blue-color, 8%);
+            background-color: lighten($blue-color, 8%);
             color: $light-color;
         }
         &_advice {
+            border-color: lighten($blue-color, 8%);
             background-color: $blue-color;
             color: $light-color;
+            &:hover {
+                background-color: lighten($blue-color, 8%);
+            }
         }
     }
 }
 
 .img-phone {
-    background: url(../../../img/phone-img.png) no-repeat;
-    width: 510px;
+    background: url($path-img-phone + 'phone-img.png') no-repeat;
+    min-width: 510px;
     height: 621px;
 
 }
 
 
-// plan block
 .page-plan {
-    margin: 55px 0 60px 0;
+    padding: 55px 0 60px 0;
 }
-
 .plan {
     text-align: center;
     display: flex;
@@ -95,7 +97,6 @@ body {
     margin-top: 102px;
     
 }
-
 .plan-item {
     flex-basis: 23.333%;
     border: 1px solid #e0e0e0;
@@ -124,7 +125,6 @@ body {
     }
       
 }
-
 .price {
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
@@ -162,17 +162,16 @@ body {
 }
 
 
-
 .page-features {
+    padding: 46px 0 70px 0;
+    border-bottom:1px solid #ededed; ;
 }
-
 .features {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 109px;
 }
-
 .features-list {
     flex-basis: 21%;
     min-width: 229px;
@@ -195,3 +194,68 @@ body {
         margin-bottom: 12px;
     }
 }
+
+
+.page-about {
+    padding: 67px 0 20px 0;
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        &__img {
+            margin-left: 20px;
+        }
+
+}
+    &-item {
+        flex-basis: 41%;
+        margin-top: 35px;
+        margin-left: 70px;
+        &__desc {
+            margin-top: 52px;
+            margin-bottom: 24px;
+        }
+
+		&__list {
+            list-style-type: none;
+            
+        }
+
+		&__item {
+            color: $black-text-color;
+            letter-spacing: 0.8px;
+            font-weight: 400;
+            line-height: 36px;
+
+        }
+        &__img {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            margin-right: 10px;
+            top: 2px;
+
+        }
+    }
+}
+
+
+.page-reviews {
+    padding: 31px 0 25px 0;
+    background-color: #f2f2f2;
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        &__img {
+            min-width: 718px;
+        }
+    }
+    &-item {
+        flex-basis: 38%;
+        margin-top: 82px;
+        &__desc {
+            margin-top: 53px;
+        }
+    }
+}
+
+
