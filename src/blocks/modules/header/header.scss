@@ -1,6 +1,6 @@
 .page-bg {
-    background: #15141a url(../../../img/header_img.png) no-repeat;
-    height: 640px;
+    background: #15141a url($path-header-bg + "header_img.png") no-repeat;
+    min-height: 640px;
     background-size: cover;
     overflow: hidden;
 }
@@ -104,7 +104,7 @@
         margin-bottom: 24px;
     }
     &__button {
-        margin-top: 42px;
+        margin-top: 60px;
         margin-left: 16px;    
         padding: 16px 30px;
         color: $light-color;   

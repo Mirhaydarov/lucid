@@ -1,9 +1,5 @@
 .block-heading {
     text-align: center;
-    &_align_left {
-        text-align: left;
-    }
-    
     &__title {
         color: $black-text-color;
         font-size: 36px;
@@ -20,6 +16,7 @@
             right: 24px;
             margin: 0 auto;
             background-color: $blue-color;
+            
         }
         &:before {
             content: "";
@@ -32,6 +29,18 @@
             margin: 0 auto;
             background-color: $blue-color;
         }
+        &_left {
+            text-align: left;
+            &:after {
+                margin: 0;
+                top: 66px;
+            }
+            &:before {
+                margin: 0;
+                left: 22px;
+                top: 66px;
+            }
+        }
         
     }
     &__subtitle {
@@ -41,6 +50,11 @@
         font-weight: 600;
         letter-spacing: 1.55px;
         text-transform: uppercase;
+        &_left {
+            text-align: left;
+        }
 
     }
 }
+
+
