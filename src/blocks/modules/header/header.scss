@@ -1,12 +1,13 @@
 .page-bg {
     background: #15141a url($path-header-bg + "header_img.png") no-repeat;
-    min-height: 640px;
+    padding-bottom: 111px;
     background-size: cover;
     overflow: hidden;
 }
 
 .header-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 30px;
 }
@@ -20,6 +21,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     align-items: center;
+    @include md-block{
+        margin: 0 auto;
+        margin-bottom: 15px;
+    };
     &__text {
         padding-top: 2px;
         margin-left: 5px;
@@ -36,17 +41,19 @@
 
 .nav-block {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
     &__item {
-        display: inline-block;
-        margin-top: 7px;
+        margin-top: 9px;
     }
 
     &__link {
+        @include md(font-size, 18px);
         text-decoration: none;
         color: $light-color;
         font-size: 16px;
         font-weight: 600;
-        margin-left: 20px;
+        margin-left: 23px;
         position: relative;
         &:after {
             content: "";
@@ -82,10 +89,42 @@
 }
 
 .header-block {
-    display: flex;
+    @include row-flex;
     position: relative;
     &_width {
-        flex-basis: 42%;
+        @include col();
+        @include size(5.2);
+        @include size-sm(12);
+        @include sm-block {
+            .header-block__button {
+                width: 270px;
+                &_active {
+                    margin: 40px 5px 15px 5px;
+                    width: 270px;
+                }
+               
+               
+            }
+        };
+
+        @include lg-block {
+            @include size-lg(8);
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 35px;
+        };
+        @include md-block {
+            @include size-md(10);
+            .header-block {
+                &__title {
+                    font-size: 30px;
+                }
+                &__desc {
+                    font-size: 12px;
+                }
+                
+            }
+        };
         margin-top: 73px;
     }
     &__desc {
@@ -104,20 +143,20 @@
         margin-bottom: 24px;
     }
     &__button {
-        margin-top: 60px;
-        margin-left: 16px;    
         padding: 16px 30px;
         color: $light-color;   
         &_active {
             padding: 16px 28px;
+            margin-top: 60px;
+            margin-right: 16px;  
+            
         }
     }
     &__img {
-        flex-basis: 40%;
         position: absolute;
         top: 50px;
-        right: -19px;
+        right: 0px;
+        @include lg (display, none);
     }
     
 }
-
