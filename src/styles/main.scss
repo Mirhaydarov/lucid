@@ -11,13 +11,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.wrap {
-    max-width: 1170px;
-    margin: 0 auto;
-    // padding-left: 100px;
-    // padding-right: 100px;
-}
-
 .text {
     color: $gray-text-color;
     font-size: 18px;
@@ -59,7 +52,7 @@ body {
     }
     &_plan {
         color: $blue-color;
-        margin-top: 23px;
+        margin-top: 40px;
         padding: 16px 42px;
         border: 1px solid #e0e0e0;
         &:hover {
@@ -78,30 +71,263 @@ body {
     }
 }
 
-.img-phone {
-    background: url($path-img-phone + 'phone-img.png') no-repeat;
-    min-width: 510px;
-    height: 621px;
 
+.page-features {
+    padding: 60px 0 50px 0;
+    border-bottom:1px solid #ededed; ;
+}
+.features {
+    margin-top: 109px;
+    @include row-flex();
+    @include md(margin-top, 60px);
+    @include sm(margin-top, 30px);
+    justify-content: center;
+}
+.features-list {
+    @include col();
+    @include size(3);
+    @include size-lg(5);
+    @include size-md(6);
+    @include size-sm(10);
+    text-align: center;
+    margin-bottom: 20px;
+    &__img {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        width: 88px;
+        height: 88px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        color: $black-text-color;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 29px;
+        margin-bottom: 12px;
+    }
+}
+
+
+.page-about {
+    padding: 67px 0 20px 0;
+    @include lg(padding-bottom, 40px);
+    &-box {
+        @include row-flex();
+        &__img {
+            margin-top: 26px;
+            margin-left: 31px;
+            @include lg (display, none);
+            @include xlg(max-width, 40%);
+            
+        }
+
+}
+    &-item {
+        @include col();
+        @include size(5);
+        @include size-xlg(6);
+        @include size-lg(10);
+        @include lg(margin, 0 auto);
+        @include size-md(12);
+        margin-top: 75px;
+        margin-left: 74px;
+        &__desc {
+            margin-top: 52px;
+            margin-bottom: 24px;
+        }
+
+		&__list {
+            list-style-type: none;
+            @include sm(display, none);
+            
+        }
+
+		&__item {
+            color: $black-text-color;
+            letter-spacing: 0.8px;
+            font-weight: 400;
+            line-height: 36px;
+
+        }
+        &__img {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            margin-right: 10px;
+            top: 2px;
+
+        }
+    }
+}
+
+
+.page-reviews {
+    padding: 31px 0 25px 0;
+    @include xlg(padding, 70px 0 60px 0);
+    background-color: #f2f2f2;
+    &-box {
+        @include row-flex();
+        justify-content: space-between;
+        &__img {
+            @include col();
+            @include size(7);
+            @include lg(display, none);
+        }
+    }
+    &-item {
+        @include col();
+        @include size(5);
+        @include size-lg(10);
+        @include lg(margin, 0 auto);
+        @include size-md(12);
+        margin-top: 97px;
+        &__desc {
+            margin-top: 53px;
+        }
+    }
+}
+
+
+.testimonials {
+    background: url(../img/testimonials-bg.jpg) no-repeat;
+    background-size: cover;
+    padding-bottom: 214px;
+    z-index: 1;
+    position: relative;
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        position: absolute;
+        background-color: rgba( 21,20,26, 0.8);
+        
+       }
+    &_heading {
+        padding-top: 60px;
+    }
+    &__title {
+        color: $light-color;
+    }
+    &-slider {
+        @include row-flex();
+        @include lg(margin-top, 50px);
+        margin-top: 93px;
+
+    }
+    &-inner {
+        @include col();
+        @include size (6);
+        @include size-lg(8);
+        @include lg(margin, 0 auto);
+        @include size-md(10);
+        @include size-sm(12);
+        &__comment {
+            color: $light-color;
+            font-style: italic;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            word-spacing: -1.5px;
+        }
+
+    }
+    &-user {
+        display: flex;
+        &__avatar {
+            margin-right: 25px;
+            align-self: center
+        }
+        &-row {
+            &__name {
+                color: $light-color;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 0.9px;
+                margin: 0;
+            }
+    
+            &__position {
+                display: block;
+                color: $light-color;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 26px;
+                letter-spacing: -1px;
+                margin: 0;
+            }
+        }
+		
+    }
+
+}
+
+
+.download {
+    background-color: $black-color;
+    padding: 60px 0 60px 0;
+    @include sm (display, none);
+    &_row {
+       display: flex;
+       justify-content: space-between;
+       flex-wrap: wrap;
+    }
+    &-box {
+        @include xlg(margin, 20px auto 0 auto);
+        
+        &__title {
+            color: $light-color;
+            font-size: 36px;
+            font-weight: 600;
+            @include xlg(margin, 0 auto); 
+
+        }
+        &__span {
+            font-weight: 300;
+            @include md(display, block);
+
+        }
+        &__button {
+            padding: 16px 31px;
+            color: $light-color;
+
+        }
+        &__button_active {
+            padding: 16px 27px;
+            margin-left: 15px;
+
+        }
+    }
 }
 
 
 .page-plan {
-    padding: 55px 0 60px 0;
+    padding: 55px 0 35px 0;
 }
 .plan {
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin-top: 102px;
+    @include row-ib();
+    font-size: 0;
     
 }
 .plan-item {
-    flex-basis: 23.333%;
+    font-size: 1rem;
     border: 1px solid #e0e0e0;
     padding-bottom: 29px;
-    min-width: 270px;
+    margin-bottom: 25px;
+    min-width: 260px;
+    @include col();
+    @include col-ib();
+    @include size(3);
 
     &__title {
         color: $black-text-color;
@@ -160,102 +386,3 @@ body {
         }
     }
 }
-
-
-.page-features {
-    padding: 46px 0 70px 0;
-    border-bottom:1px solid #ededed; ;
-}
-.features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 109px;
-}
-.features-list {
-    flex-basis: 21%;
-    min-width: 229px;
-    text-align: center;
-    &__img {
-        display: flex;
-        justify-content: center;
-        border: 1px solid #e0e0e0;
-        border-radius: 50%;
-        width: 88px;
-        height: 88px;
-        margin: 0 auto;
-    }
-
-    &__title {
-        color: $black-text-color;
-        font-size: 24px;
-        font-weight: 400;
-        margin-top: 29px;
-        margin-bottom: 12px;
-    }
-}
-
-
-.page-about {
-    padding: 67px 0 20px 0;
-    &-box {
-        display: flex;
-        flex-wrap: wrap;
-        &__img {
-            margin-left: 20px;
-        }
-
-}
-    &-item {
-        flex-basis: 41%;
-        margin-top: 35px;
-        margin-left: 70px;
-        &__desc {
-            margin-top: 52px;
-            margin-bottom: 24px;
-        }
-
-		&__list {
-            list-style-type: none;
-            
-        }
-
-		&__item {
-            color: $black-text-color;
-            letter-spacing: 0.8px;
-            font-weight: 400;
-            line-height: 36px;
-
-        }
-        &__img {
-            width: 16px;
-            height: 16px;
-            position: relative;
-            margin-right: 10px;
-            top: 2px;
-
-        }
-    }
-}
-
-
-.page-reviews {
-    padding: 31px 0 25px 0;
-    background-color: #f2f2f2;
-    &-box {
-        display: flex;
-        flex-wrap: wrap;
-        &__img {
-            min-width: 718px;
-        }
-    }
-    &-item {
-        flex-basis: 38%;
-        margin-top: 82px;
-        &__desc {
-            margin-top: 53px;
-        }
-    }
-}
-
-
