@@ -6,7 +6,9 @@
         font-weight: 600;
         line-height: 41px;
         position: relative;
+        margin-top: 13px;
         &:after {
+            @include sm(display, none);
             content: "";
             width: 20px;
             height: 2px;
@@ -19,6 +21,7 @@
             
         }
         &:before {
+            @include sm(display, none);
             content: "";
             width: 20px;
             height: 2px;
@@ -50,6 +53,7 @@
         font-weight: 600;
         letter-spacing: 1.55px;
         text-transform: uppercase;
+        margin: 0;
         &_left {
             text-align: left;
         }

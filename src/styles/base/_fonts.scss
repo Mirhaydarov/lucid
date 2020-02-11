@@ -2,10 +2,7 @@
 
 @font-face {
     font-family: '#{$icomoon-font-family}';
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?t8gnt9');
-    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?t8gnt9#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?t8gnt9') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?t8gnt9##{$icomoon-font-family}') format('svg');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?t8gnt9') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
