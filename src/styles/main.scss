@@ -11,6 +11,13 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 .text {
     color: $gray-text-color;
     font-size: 18px;
