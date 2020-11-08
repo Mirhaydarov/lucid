@@ -1,5 +1,3 @@
-import "./import/modules";
-
 'use strict'
 
 let slideIndex = 2;
